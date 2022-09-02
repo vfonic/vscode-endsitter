@@ -2,15 +2,15 @@
   "name": "endsitter",
   "displayName": "endsitter",
   "description": "Wisely add \"end\" in Ruby.",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "preview": false,
-  "publisher": "jemmyw",
+  "publisher": "vfonic",
   "license": "MIT",
   "icon": "images/icon.png",
-  "bugs": "https://github.com/jemmyw/vscode-endwise/issues",
+  "bugs": "https://github.com/vfonic/vscode-endsitter/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jemmyw/vscode-endwise"
+    "url": "https://github.com/vfonic/vscode-endsitter"
   },
   "engines": {
     "vscode": "^1.58.0"
@@ -29,18 +29,18 @@
   "contributes": {
     "keybindings": [
       {
-        "command": "endwise.enter",
+        "command": "endsitter.enter",
         "key": "enter",
         "when": "editorTextFocus && editorLangId =~ /^ruby$/ && vim.mode != 'Normal' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' "
       },
       {
-        "command": "endwise.cmdEnter",
+        "command": "endsitter.cmdEnter",
         "key": "ctrl+enter",
         "mac": "cmd+enter",
         "when": "editorTextFocus && editorLangId =~ /^ruby$/ && vim.mode != 'Normal' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress^' "
       },
       {
-        "command": "endwise.checkForAcceptSelectedSuggestion",
+        "command": "endsitter.checkForAcceptSelectedSuggestion",
         "key": "enter",
         "when": "editorTextFocus && editorLangId =~ /^ruby$/ && suggestWidgetVisible && suggestionMakesTextEdit"
       }
@@ -51,6 +51,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
+    "cinstall": "vsce package && code --install-extension ./endsitter-2.0.0.vsix",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },
