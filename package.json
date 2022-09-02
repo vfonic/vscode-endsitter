@@ -2,7 +2,7 @@
   "name": "endsitter",
   "displayName": "endsitter",
   "description": "Wisely add \"end\" in Ruby.",
-  "version": "0.0.1",
+  "version": "1.5.1",
   "preview": false,
   "publisher": "jemmyw",
   "license": "MIT",
